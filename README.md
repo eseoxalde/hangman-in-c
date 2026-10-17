@@ -1,63 +1,79 @@
-# Juego del Ahorcado en C
+# Hangman en C
 
-## Motivacion
+## Abstract
 
-Seminario de Lenguajes (Opción:C) año 2008.
-Facultad de informática
-Universidad Nacional de La Plata
+A terminal-based Hangman game implemented in C. Players can guess randomly selected words, view game results, and manage the word list through an interactive menu. The program also records whether each game was won or lost. The project explores modular programming, functions, and file handling in C.
 
 ## Descripción
 
-Este es un programa en **C** que implementa el clásico juego del **Ahorcado** en modo terminal.  
-Permite jugar adivinando palabras letra por letra, gestionar palabras y puntajes desde archivos de texto.
+Programa desarrollado en **C** que implementa el clásico juego del **Ahorcado** en modo terminal. Permite jugar adivinando palabras letra por letra y gestionar palabras y resultados de partidas mediante archivos de texto.
 
 ## Funcionalidades
 
 - Jugar al Ahorcado con palabras leídas desde `palabras.txt`.
-- Ver el historial de puntajes en `puntajes.txt`.
-- Mostrar ayuda con las reglas del juego.
-- Gestionar palabras:
-  - Ver palabras existentes.
+- Consultar el historial de resultados en `puntajes.txt`.
+- Consultar la ayuda con las reglas del juego.
+- Gestionar las palabras:
+  - Ver las palabras existentes.
   - Agregar nuevas palabras.
   - Eliminar palabras.
-- Borrar todos los puntajes guardados.
-- Menú interactivo por terminal.
+- Borrar todos los resultados guardados.
+- Navegar por un menú interactivo en la terminal.
 
 ## Estructura del proyecto
 
-/ahorcado
-├── main.c # Programa principal con menú
-├── funciones.c # Implementación de funciones
-├── funciones.h # Prototipos y constantes
-├── palabras.txt # Archivo con palabras para el juego
-└── puntajes.txt # Archivo con historial de puntajes
+- `main.c`: programa principal y menú.
+- `funciones.c`: implementación de las funciones del juego.
+- `funciones.h`: prototipos de funciones y constantes.
+- `palabras.txt`: archivo con las palabras disponibles para el juego.
+- `puntajes.txt`: archivo con el historial de resultados.
+
+## Tecnologías
+
+- **Lenguaje:** C.
+- **Compilador:** GCC.
+- **Manejo de archivos:** lectura y escritura de archivos de texto.
+- **Selección aleatoria:** `rand()`, `srand()` y `time()`.
+- **Organización del código:** módulos separados en archivos `.c` y `.h`.
 
 ## Cómo compilar y ejecutar
 
-### Linux / Mac
+### Linux / macOS
 
+```bash
 gcc main.c funciones.c -o ahorcado
 ./ahorcado
+```
 
-### Windows (cmd)
+### Windows (CMD)
 
+```bash
 gcc main.c funciones.c -o ahorcado.exe
 ahorcado.exe
+```
 
-## Archivos de datos
-
-palabras.txt: Cada palabra en una línea, máximo 15 caracteres.
-
-puntajes.txt: Se genera automáticamente, registra el nombre del jugador y si ganó o perdió.
+Se necesita un compilador de C, como GCC, para compilar el programa.
 
 ## Uso
 
-1. Ejecutar el programa.
+1. Compilar y ejecutar el programa.
 2. Seleccionar una opción del menú:
-   - Jugar
-   - Ver puntajes
-   - Ayuda
-   - Ver/Agregar/Eliminar palabras
-   - Borrar puntajes
-   - Salir
-3. Seguir las instrucciones en pantalla.
+   - Jugar.
+   - Ver puntajes.
+   - Consultar la ayuda.
+   - Ver, agregar o eliminar palabras.
+   - Borrar los puntajes.
+   - Salir.
+3. Seguir las instrucciones que aparecen en pantalla.
+
+## Contexto académico
+
+Proyecto desarrollado como trabajo práctico final del **Seminario de Lenguaje: opción C**, de la Facultad de Informática de la Universidad Nacional de La Plata (UNLP).
+
+El objetivo original era implementar el juego del Ahorcado mediante la lectura de palabras desde un archivo de texto, la selección aleatoria de una palabra y la validación de las letras ingresadas por el usuario.
+
+La consigna también requería controlar los intentos disponibles y organizar el código en módulos separados, utilizando funciones, archivos de cabecera y herramientas de la biblioteca estándar de C.
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia MIT. Consultar el archivo `LICENSE` para conocer las condiciones de uso y distribución.

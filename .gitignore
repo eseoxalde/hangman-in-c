@@ -1,0 +1,26 @@
+
+# Ejecutables compilados
+ahorcado
+ahorcado.exe
+*.out
+*.o
+*.obj
+
+# Archivos de depuración
+*.dSYM/
+core
+core.*
+
+# Archivos temporales y de respaldo
+*~
+*.swp
+*.swo
+*.bak
+
+# Configuración de editores e IDE
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

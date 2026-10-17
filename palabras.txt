@@ -1,5 +1,6 @@
 casa
-perro
-computadora
-alumno
 escuela
+alumno
+mar
+montaña
+auto
